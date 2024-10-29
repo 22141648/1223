@@ -24,7 +24,7 @@ def configure_acl(net_connect):
     acl_commands = [
         'access-list 10 permit 192.168.1.0 0.0.0.255',
         'access-list 10 deny any',
-        'interface GigabitEthernet0/1',
+        'interface GigabitEthernet1',
         'ip access-group 10 in'
     ]
 
@@ -52,7 +52,7 @@ def configure_ipsec(net_connect):
         'set transform-set MY_TRANSFORM_SET',
         'match address 100',
         'exit',
-        'interface GigabitEthernet0/1',
+        'interface GigabitEthernet1',
         'crypto map MY_CRYPTO_MAP'
     ]
 
